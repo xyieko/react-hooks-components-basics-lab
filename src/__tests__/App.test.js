@@ -20,3 +20,4 @@ test("renders the correct child components", () => {
   expect(container.querySelector("#home")).toBeInTheDocument();
   expect(container.querySelector("#about")).toBeInTheDocument();
 });
+<div id="home"></div>

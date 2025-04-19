@@ -23,8 +23,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
+      <div id="home">Home Content</div>
+      <div id="about">About Content</div>
     </div>
   );
 }
