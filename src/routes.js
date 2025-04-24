@@ -24,7 +24,7 @@ const routes = createBrowserRouter([
     element: <Actors />
   },
   {
-    path: "/about", // Add this new route
+    path: "/about", 
     element: <About />
   }
 ]);

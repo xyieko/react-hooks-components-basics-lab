@@ -1,10 +1,16 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
+import { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
 
 function Actors() {
-  // actors data should be fetched or passed as props
-  const actors = [];
-  
+  const [actors, setActors] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/actors")
+      .then(r => r.json())
+      .then(data => setActors(data))
+      .catch(error => console.error(error));
+  }, []);
+
   return (
     <>
       <NavBar />

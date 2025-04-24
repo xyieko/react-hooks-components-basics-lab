@@ -1,10 +1,16 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
+import { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
 
 function Directors() {
-  // directors data should be fetched or passed as props
-  const directors = [];
-  
+  const [directors, setDirectors] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/directors")
+      .then(r => r.json())
+      .then(data => setDirectors(data))
+      .catch(error => console.error(error));
+  }, []);
+
   return (
     <>
       <NavBar />

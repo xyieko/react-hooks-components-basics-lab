@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar';
 
 function Movie() {
   const { id } = useParams();
-  // Fetch movie data based on id or get it from context
+  
   
   return (
     <>
